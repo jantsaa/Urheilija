@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Sisällytä asiakassovellus -->
+  <script src="./client.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+  <title>Urheilijat II -tehtävä</title>
+</head>
+<body onLoad="loadApp()">
+  <div container>
+    <div id="forms">
+        
+          <div id="uploadform">
+            <form id="postform" method="POST" action="/" onsubmit="return validateForm()">
+              <label id="labeltext">Upload an athlete</label>
+              <input id="firstname" class="textinput" type="text" name="firstname" placeholder="First name" required>
+              <input id="lastname" class="textinput" type="text" name="lastname" placeholder="Last name" required>
+              <input id="weight" class="textinput" type="number" name="weight" placeholder="weight" required>
+              <input id="date" class="textinput" type="date" name="birth" placeholder="Birthdate" required>
+              <input id="img" class="textinput" type="text" name="img" placeholder="Image URL" required>
+              <input id="sports" class="textinput" type="text" name="sports" placeholder="Sport" required>
+              <input id="stats" class="textinput" type="text" name="stats" placeholder="Stats" required>
+              <input id="submit" class="textinput" type="submit" value="Submit">
+            </form>
+          </div>
+
+          <div id="downloadform">
+              <form>
+                  <fieldset>
+                      <button id="lataa">Show athletes</button>
+                  </fieldset>
+                </form>
+          </div>
+
+          <div id="error">
+
+          </div>
+    </div>
+    
+  
+  <div id="athletes">
+    <!--Tänne tulee tietokannasta urheilijat-->
+  </div>
+</div>
+</body>
+</html>
